@@ -12,7 +12,7 @@ Northern Ag Network / Chuck Denowh – Policy Director – United Property Owner
 
 ## Map Data
 
-Map Data Sources:Elk Population and Distribution https://fwp.mt.gov/conservation/wildlife-management/elk/population-and-distribution
-State outline data: https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html Links to an external site.
-Fire data: https://www.fs.usda.gov/rds/archive/catalog/RDS-2013-0009.6
-Flood data: still finding source
+-Map Data Sources:Elk Population and Distribution https://fwp.mt.gov/conservation/wildlife-management/elk/population-and-distribution
+-State outline data: https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html Links to an external site.
+-Fire data: https://www.fs.usda.gov/rds/archive/catalog/RDS-2013-0009.6
+-Flood data: still finding source
