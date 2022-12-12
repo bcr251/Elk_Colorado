@@ -78,7 +78,7 @@
   </header>
 
   <section>
-    <div id='map'></div>
+    <img id="map" src="./Elk_maps/Elk_map_09.png">
   </section>
 
   <br><br>
@@ -87,11 +87,7 @@
   <p>This map was created by Bethany Craig in the MAP 671 Fall 2022 course at the University of Kentucky. This map visualizes changes in big game populations in the state of Colorado in correlation to wildfires, urban areas, and floods in 2018. My map demonstrates how past flooding, wildfires, and deforestation/development may have affected the elk population, and hopes to uncover some possible patterns in their residential areas in the state of Colorado. The map was created using QGIS. For more information visit: https://github.com/bcr251/Elk_Montana
   
   </p>
-  
-    <hr>
-        <!-- <h4><a href="https://uky-gis.github.io">UKy GIS and Mapping</a></h4> -->
-        <a href="https://github.com/bcr251/Elk_Montana">
-            <img src="logo-color-400px.png" alt="Uinversity of Kentucky Geography"></a>
+
 
   <script>
 
@@ -104,69 +100,7 @@
       zoomControl: true
     }
 
-    // Create Leaflet map with above options.
-    var map = L.map('map', options);
-    // Get basemap URL from Leaflet Providers
-    var basemap_url = 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
 
-    // http://leaflet-extras.github.io/leaflet-providers/preview/index.html
-    // Get basemap attributes from Leaflet Providers for the specific map used
-    var basemap_attributes = {
-      maxZoom: 18,
-      attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community'
-    };
-    // requests some map tiles
-    var tiles = L.tileLayer(basemap_url, basemap_attributes);
-
-    map.addLayer(tiles);
-
-
-    var samplepoints = [
-      {
-        name: "Bethany Craig",
-        properties: {
-          description: "Lexington, KY tree map",
-          coordinates: [38.048, -84.502],
-          topic: "Forestry"
-        }
-      }
-      //,
-
-    ];
-
-    // Create empty latLng bounds for zooming/centering map dynamically
-    var bounds = L.latLngBounds();
-
-    // Create all sample points
-    for (var i = 0; i < samplepoints.length; i++) {
-      var props = samplepoints[i].properties;
-      var popup = `<h3>${samplepoints[i].name}</h3>
-            <p><b>Topic</b>:<br>${props.topic}</p>
-            <p><b>Short description</b>:<br><i>${props.description}</i></p>`
-      //Create the icon 
-      var icon = L.icon({
-        iconUrl: props.icon,
-        iconSize: [40, 40],
-        popupAnchor: [0, -22],
-        className: "icon"
-      });
-
-      var marker = L.marker(samplepoints[i].properties.coordinates, {
-      })
-        .addTo(map)
-        .bindPopup(popup);
-
-      //  Extend the bounds as features are added
-      bounds.extend(samplepoints[i].properties.coordinates)
-
-
-      marker.on("mouseover", function () {
-        this.openPopup();
-      });
-      // marker.on("mouseout", function() {
-      //   this.closePopup();
-      // });
-    }
 
 // If you disable the mouseout, the popup will linger until mousing/clicking over another marker
 
